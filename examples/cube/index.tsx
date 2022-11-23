@@ -29,10 +29,7 @@ new Container().init().then(({ canvas, raf, renderer, resizeRendererToDisplaySiz
     cube.rotation.y = time;
 
     // compate the canvas size to the display size
-    if (resizeRendererToDisplaySize()) {
-      camera.aspect = canvas.clientWidth / canvas.clientHeight;
-      camera.updateProjectionMatrix();
-    }
+    resizeRendererToDisplaySize()
 
     renderer.render(scene, camera);
     raf(render);
